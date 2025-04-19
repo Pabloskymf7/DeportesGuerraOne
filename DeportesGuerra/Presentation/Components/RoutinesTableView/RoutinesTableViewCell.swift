@@ -1,13 +1,13 @@
 //
-//  TableViewCell.swift
+//  RoutinesTableViewCell.swift
 //  DeportesGuerra
 //
-//  Created by Pablo Miguel Ferrer on 16/4/25.
+//  Created by Pablo Miguel Ferrer on 19/4/25.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class RoutinesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
