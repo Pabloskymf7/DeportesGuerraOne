@@ -149,42 +149,38 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J0w-Pv-J6h">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="120.33333333333333"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="134.33333333333334"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-zg-OUf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="14"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="Button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XiL-bH-06U"/>
+                                                            <action selector="goToStrengthExercises:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Gk-WS-QB7"/>
+                                                        </connections>
+                                                    </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" image="fuerza" translatesAutoresizingMaskIntoConstraints="NO" id="eLf-cx-04g">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <rect key="frame" x="0.0" y="14" width="100" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="9jK-FO-r9q"/>
                                                             <constraint firstAttribute="width" constant="100" id="dUI-Y5-Ff0"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuerza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SJ-J5-Aat">
-                                                        <rect key="frame" x="0.0" y="100" width="100" height="20.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="114" width="100" height="20.333333333333343"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-zg-OUf">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="Button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XiL-bH-06U"/>
-                                                    <action selector="goToStrengthExercises:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Gk-WS-QB7"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Pa1-zg-OUf" firstAttribute="leading" secondItem="8Y6-8C-RE0" secondAttribute="leading" id="1Ms-ry-UmK"/>
                                             <constraint firstAttribute="width" constant="100" id="7HN-uS-cij"/>
                                             <constraint firstAttribute="height" constant="120" id="Ccs-bx-jKN"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pa1-zg-OUf" secondAttribute="trailing" id="JmN-CB-6wj"/>
-                                            <constraint firstItem="Pa1-zg-OUf" firstAttribute="top" secondItem="8Y6-8C-RE0" secondAttribute="top" id="YpM-cn-uuL"/>
-                                            <constraint firstAttribute="bottom" secondItem="Pa1-zg-OUf" secondAttribute="bottom" id="df3-kG-WWZ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpf-Eq-JrX">
