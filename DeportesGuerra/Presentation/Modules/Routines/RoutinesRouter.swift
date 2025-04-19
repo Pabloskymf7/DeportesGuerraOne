@@ -5,4 +5,12 @@
 //  Created by Pablo Miguel Ferrer on 19/4/25.
 //
 
-import Foundation
+import UIKit
+
+class RoutinesRouter: RoutinesRouterProtocol {
+    var viewController: RoutinesViewController
+    
+    init(viewController: RoutinesViewController) {
+        self.viewController = viewController
+    }
+}

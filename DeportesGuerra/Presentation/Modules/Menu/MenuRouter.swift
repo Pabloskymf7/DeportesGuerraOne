@@ -15,9 +15,9 @@ class MenuRouter: MenuRouterProtocol {
     }
     
     func goToCardioScreen(with exercise: [Exercise]) {
-//        let detailViewController = RoutinesScreen().build(with: exercise)
-//        viewController.navigationController?.pushViewController(detailViewController, animated: true)
-        exercise.forEach { $0 }
-        print(exercise)
+        let detailViewController = RoutinesBuilder().build(with: exercise)
+        viewController.navigationController?.pushViewController(detailViewController, animated: true)
+//        exercise.forEach { $0 }
+//        print(exercise)
     }
 }

@@ -22,6 +22,9 @@ class SportDataSource: SportDataSourceProtocol {
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "X-Api-Key")
         let (data, _) = try await URLSession.shared.data(for: request)
+        if let jsonString = String(data: data, encoding: .utf8) {
+                print("Received JSON: \(jsonString)") // Aquí verás si realmente es un arreglo o diccionario
+            }
         return data
     }
 }

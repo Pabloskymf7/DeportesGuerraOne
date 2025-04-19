@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkError: Error {
     case invalidUrl
+    case apiError(String)
 }
 
 class SportUseCause: SportUseCaseProtocol {
