@@ -19,22 +19,27 @@ class MenuViewModel: MenuViewModelProtocol {
     }
 
     func viewDidLoad() {
-        getAllExercises()
+        //Hola
     }
 
-    private func getAllExercises() {
-//        Task {
-//            do {
-//                exercise = try await sportUseCase.getExercises()
-//                dataLoaded?()
-//            } catch {
-//                print("Error \(error)")
-//            }
-//        }
+    private func getAllExercises(with endpoint: String) {
+        Task {
+            do {
+                exercise = try await sportUseCase.getExercises( with: endpoint)
+                dataLoaded?()
+            } catch {
+                print("Error \(error)")
+            }
+        }
     }
 
-    func goToProfile(with index: Int) {
-        router.goToProfile(with: exercise[index])
+    func goToCardioScreen() {
+        getAllExercises(with: "?type=cardio")
+        router.goToCardioScreen(with: exercise)
+        dataLoaded = { [weak self] in
+            guard let self = self else {return}
+            self.router.goToCardioScreen(with: exercise)
+        }
     }
 
 }

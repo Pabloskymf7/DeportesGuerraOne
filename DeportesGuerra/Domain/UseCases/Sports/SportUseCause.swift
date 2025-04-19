@@ -18,7 +18,7 @@ class SportUseCause: SportUseCaseProtocol {
         self.repository = repositoy
     }
 
-    func getExercises() async throws -> [Exercise] {
-        return try await repository.getExercises()
+    func getExercises(with endpoint: String) async throws -> [Exercise] {
+        return try await repository.getExercises(with: endpoint)
     } 
 }

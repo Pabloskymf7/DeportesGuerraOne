@@ -14,8 +14,8 @@ class SportRepository: SportRepositoryProtocol {
         self.sportDataSource = sportDataSource
     }
 
-    func getExercises() async throws -> [Exercise] {
-        let exercisesDTO = try await sportDataSource.getExercises()
+    func getExercises(with endpoint: String) async throws -> [Exercise] {
+        let exercisesDTO = try await sportDataSource.getExercises(with: endpoint)
         return exercisesDTO.map{ $0.toDomain() }
     }
 }

@@ -34,6 +34,7 @@ class MenuViewController: UIViewController {
 
     // MARK: - IBAction
     @IBAction func goToCardioExercises(_ sender: Any) {
+        viewModel.goToCardioScreen()
     }
 
     @IBAction func goToOlympicExercises(_ sender: Any) {

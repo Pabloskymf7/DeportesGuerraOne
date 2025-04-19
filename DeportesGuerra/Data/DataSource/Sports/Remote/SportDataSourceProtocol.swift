@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SportDataSourceProtocol {
-    func getExercises() async throws -> [ExerciseDTO]
+    func getExercises(with endpoint: String) async throws -> [ExerciseDTO]
 }
