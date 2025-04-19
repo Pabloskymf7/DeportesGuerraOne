@@ -13,7 +13,5 @@ protocol MenuRouterProtocol {
 
 protocol MenuViewModelProtocol {
     var exercise: [Exercise] { get }
-    var dataLoaded: (() -> Void)? { get set }
-    func viewDidLoad()
     func goToCardioScreen()
 }

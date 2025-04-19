@@ -6,40 +6,44 @@
 //
 
 import UIKit
+enum ExercisesEndpoints: String {
+    case cardio = "?type=cardio"
+    case olympic = "?type=olympic_weightlifting"
+    case plyometrics = "?type=plyometrics"
+    case powerlifting = "?type=powerlifting"
+    case strength = "?type=strength"
+    case strongman = "?type=strongman"
+}
 
 class MenuViewModel: MenuViewModelProtocol {
     var router: MenuRouterProtocol
     var sportUseCase: SportUseCaseProtocol
-    var dataLoaded: (() -> Void)?
     var exercise = [Exercise]()
+    private var isLoading = false
 
     init(router: MenuRouterProtocol, sportUseCase: SportUseCaseProtocol) {
         self.router = router
         self.sportUseCase = sportUseCase
     }
 
-    func viewDidLoad() {
-        //Hola
-    }
-
-    private func getAllExercises(with endpoint: String) {
+    private func getAllExercises(with endpoint: String, completion: @escaping () -> Void) {
+        guard !isLoading else { return }
+        isLoading = true
         Task {
             do {
                 exercise = try await sportUseCase.getExercises( with: endpoint)
-                dataLoaded?()
             } catch {
                 print("Error \(error)")
             }
+            isLoading = false
+            completion()
         }
     }
 
     func goToCardioScreen() {
-        getAllExercises(with: "?type=cardio")
-        router.goToCardioScreen(with: exercise)
-        dataLoaded = { [weak self] in
-            guard let self = self else {return}
-            self.router.goToCardioScreen(with: exercise)
-        }
+        getAllExercises(with: ExercisesEndpoints.cardio.rawValue) {
+            // Solo navegar cuando los datos estén listos
+            self.router.goToCardioScreen(with: self.exercise)
+        }    
     }
-
 }
