@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SportRepositoryProtocol {
-    func getExercises() async throws -> [Exercise]
+    func getExercises(with endpoint: String) async throws -> [Exercise]
 }

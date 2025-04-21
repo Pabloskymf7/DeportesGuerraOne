@@ -9,8 +9,8 @@ import Foundation
 
 class SportDataSource: SportDataSourceProtocol {
     let apiKey = "ptN1LBeWONwOWqCGPHkk9A==DSII6rbIsE3IIqjL"
-    func getExercises() async throws -> [ExerciseDTO] {
-        let data = try await loadData(with: "?muscle=biceps")
+    func getExercises(with endpoint: String) async throws -> [ExerciseDTO] {
+        let data = try await loadData(with: endpoint)
         let response = try JSONDecoder().decode([ExerciseDTO].self, from: data)
         return response
     }

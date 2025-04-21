@@ -172,19 +172,18 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XiL-bH-06U"/>
-                                                    <action selector="goToStrengthExercises:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Gk-WS-QB7"/>
+                                                    <action selector="goToStrengthExercises:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BcW-UC-drO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Pa1-zg-OUf" firstAttribute="leading" secondItem="8Y6-8C-RE0" secondAttribute="leading" id="1Ms-ry-UmK"/>
+                                            <constraint firstItem="Pa1-zg-OUf" firstAttribute="top" secondItem="8Y6-8C-RE0" secondAttribute="top" id="1jE-3D-DZk"/>
                                             <constraint firstAttribute="width" constant="100" id="7HN-uS-cij"/>
                                             <constraint firstAttribute="height" constant="120" id="Ccs-bx-jKN"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pa1-zg-OUf" secondAttribute="trailing" id="JmN-CB-6wj"/>
-                                            <constraint firstItem="Pa1-zg-OUf" firstAttribute="top" secondItem="8Y6-8C-RE0" secondAttribute="top" id="YpM-cn-uuL"/>
-                                            <constraint firstAttribute="bottom" secondItem="Pa1-zg-OUf" secondAttribute="bottom" id="df3-kG-WWZ"/>
+                                            <constraint firstItem="Pa1-zg-OUf" firstAttribute="leading" secondItem="8Y6-8C-RE0" secondAttribute="leading" id="Cvu-an-Bcp"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pa1-zg-OUf" secondAttribute="bottom" id="GtT-4s-s9K"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pa1-zg-OUf" secondAttribute="trailing" id="y5H-0T-iQ6"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpf-Eq-JrX">
