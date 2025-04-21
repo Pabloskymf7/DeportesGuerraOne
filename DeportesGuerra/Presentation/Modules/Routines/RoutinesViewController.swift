@@ -15,6 +15,23 @@ class RoutinesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBindings()
+        viewModel.viewDidLoad()
+        setupUI()
+    }
+    
+    func setupBindings() {
+        viewModel.dataLoaded = {
+            DispatchQueue.main.async{ [weak self] in
+                guard let self else { return }
+                self.tableView.reloadData()
+            }
+        }
+    }
+    private func setupUI() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.title = "Deportes Guerra"
+        configureTable()
     }
 }
 

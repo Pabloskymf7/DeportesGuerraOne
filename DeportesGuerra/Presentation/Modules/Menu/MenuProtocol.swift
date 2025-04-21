@@ -8,10 +8,9 @@
 import UIKit
 
 protocol MenuRouterProtocol {
-    func goToCardioScreen(with exercise: [Exercise])
+    func goToCardioScreen(with endpoint: String)
 }
 
 protocol MenuViewModelProtocol {
-    var exercise: [Exercise] { get }
     func goToCardioScreen()
 }
