@@ -28,7 +28,6 @@ class MenuViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
@@ -38,18 +37,23 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func goToOlympicExercises(_ sender: Any) {
+        viewModel.goToOlympicScreen()
     }
 
     @IBAction func goToPliometricsExercises(_ sender: Any) {
+        viewModel.goToPliometricsScreen()
     }
 
     @IBAction func goToStrengthExercises(_ sender: Any) {
+        viewModel.goToStrengthScreen()
     }
 
     @IBAction func goToStrongmanExercises(_ sender: Any) {
+        viewModel.goToStrongmanScreen()
     }
 
     @IBAction func goToPowerliftingExercises(_ sender: Any) {
+        viewModel.goToPowerliftingScreen()
     }
     
 }

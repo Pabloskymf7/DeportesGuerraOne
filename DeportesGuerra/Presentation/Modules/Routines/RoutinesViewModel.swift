@@ -27,7 +27,7 @@ class RoutinesViewModel: RoutinesViewModelProtocol {
     private func getAllExercises(with endpoint: String) {
         Task {
             do {
-                exercise = try await sportUseCase.getExercises( with: endpoint)
+                exercise = try await sportUseCase.getExercises(with: endpoint)
                 dataLoaded?()
             } catch {
                 print("Error \(error)")

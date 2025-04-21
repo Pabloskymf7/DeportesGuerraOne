@@ -7,7 +7,7 @@
 
 import UIKit
 enum ExercisesEndpoints: String {
-    case cardio = "?muscle=biceps"
+    case cardio = "?type=cardio"
     case olympic = "?type=olympic_weightlifting"
     case plyometrics = "?type=plyometrics"
     case powerlifting = "?type=powerlifting"
@@ -25,6 +25,26 @@ class MenuViewModel: MenuViewModelProtocol {
     }
 
     func goToCardioScreen() {
-        router.goToCardioScreen(with: ExercisesEndpoints.cardio.rawValue)
+        router.goToRoutinesScreen(with: ExercisesEndpoints.cardio.rawValue)
+    }
+    
+    func goToOlympicScreen() {
+        router.goToRoutinesScreen(with: ExercisesEndpoints.olympic.rawValue)
+    }
+    
+    func goToPliometricsScreen() {
+        router.goToRoutinesScreen(with: ExercisesEndpoints.plyometrics.rawValue)
+    }
+    
+    func goToPowerliftingScreen() {
+        router.goToRoutinesScreen(with: ExercisesEndpoints.powerlifting.rawValue)
+    }
+    
+    func goToStrengthScreen() {
+        router.goToRoutinesScreen(with: ExercisesEndpoints.strength.rawValue)
+    }
+    
+    func goToStrongmanScreen() {
+        router.goToRoutinesScreen(with: ExercisesEndpoints.strongman.rawValue)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoutinesRouter: RoutinesRouterProtocol {
+class RoutinesRouter: RoutinesRouterProtocol {
     var viewController: RoutinesViewController
     
     init(viewController: RoutinesViewController) {

@@ -8,9 +8,14 @@
 import UIKit
 
 protocol MenuRouterProtocol {
-    func goToCardioScreen(with endpoint: String)
+    func goToRoutinesScreen(with endpoint: String)
 }
 
 protocol MenuViewModelProtocol {
     func goToCardioScreen()
+    func goToOlympicScreen()
+    func goToPliometricsScreen()
+    func goToPowerliftingScreen()
+    func goToStrengthScreen()
+    func goToStrongmanScreen()
 }

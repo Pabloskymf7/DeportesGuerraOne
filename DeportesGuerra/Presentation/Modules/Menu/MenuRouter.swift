@@ -14,7 +14,7 @@ class MenuRouter: MenuRouterProtocol {
         self.viewController = viewController
     }
     
-    func goToCardioScreen(with endpoint: String) {
+    func goToRoutinesScreen(with endpoint: String) {
         let detailViewController = RoutinesBuilder().build(with: endpoint)
         viewController.navigationController?.pushViewController(detailViewController, animated: true)
     }
