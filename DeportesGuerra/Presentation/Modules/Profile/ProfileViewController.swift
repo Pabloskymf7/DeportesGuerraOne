@@ -5,4 +5,8 @@
 //  Created by Pablo Miguel Ferrer on 5/4/25.
 //
 
-import Foundation
+import UIKit
+
+class ProfileViewController: UIViewController {
+    var viewModel: ProfileViewModelProtocol!
+}

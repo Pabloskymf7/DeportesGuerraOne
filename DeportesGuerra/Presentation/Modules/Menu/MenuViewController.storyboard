@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -280,21 +279,6 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-e3-Mqf">
-                                <rect key="frame" x="0.0" y="734" width="393" height="49"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="XJW-Ch-Px8"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Menu" image="house" catalog="system" id="nTe-zx-yNw">
-                                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="medium" renderingMode="template" variableValue="0.40000000000000008"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Compra" image="cart" catalog="system" id="8qW-Kn-M0c"/>
-                                    <tabBarItem title="Perfil" image="person" catalog="system" id="j3m-1Z-zlI"/>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BcD-UE-0Gr">
                                 <rect key="frame" x="74.666666666666686" y="169.66666666666663" width="244" height="200"/>
                                 <subviews>
@@ -311,16 +295,13 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hT5-e3-Mqf" secondAttribute="bottom" constant="1" id="1H3-m1-kUH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yw1-Gc-YQG" secondAttribute="trailing" constant="16" id="5wN-hU-4bo"/>
                             <constraint firstItem="VwU-FC-eVI" firstAttribute="top" secondItem="Hk8-0k-qfa" secondAttribute="bottom" constant="30.329999999999998" id="6cL-1H-e0l"/>
-                            <constraint firstItem="hT5-e3-Mqf" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="DEr-cb-Exe"/>
                             <constraint firstItem="Hk8-0k-qfa" firstAttribute="top" secondItem="fbF-7I-BqC" secondAttribute="bottom" constant="15" id="HNq-w2-4Af"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fbF-7I-BqC" secondAttribute="trailing" constant="16" id="IaS-L4-PIN"/>
-                            <constraint firstItem="hT5-e3-Mqf" firstAttribute="top" secondItem="VwU-FC-eVI" secondAttribute="bottom" constant="36" id="Lg0-rf-Ofl"/>
                             <constraint firstItem="yw1-Gc-YQG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Or8-MX-hVC"/>
-                            <constraint firstItem="hT5-e3-Mqf" firstAttribute="centerX" secondItem="Hk8-0k-qfa" secondAttribute="centerX" id="R9B-b9-ROR"/>
-                            <constraint firstItem="hT5-e3-Mqf" firstAttribute="centerX" secondItem="VwU-FC-eVI" secondAttribute="centerX" id="eSd-dg-zY6"/>
+                            <constraint firstItem="VwU-FC-eVI" firstAttribute="leading" secondItem="Hk8-0k-qfa" secondAttribute="leading" id="dJD-7I-mUX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="VwU-FC-eVI" secondAttribute="bottom" constant="86" id="h4y-Iy-GDL"/>
                             <constraint firstItem="BcD-UE-0Gr" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iEm-Nx-PXa"/>
                             <constraint firstItem="fbF-7I-BqC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="iwb-0n-Yh9"/>
                             <constraint firstItem="fbF-7I-BqC" firstAttribute="top" secondItem="BcD-UE-0Gr" secondAttribute="bottom" constant="25" id="k6q-gy-wAE"/>
@@ -346,13 +327,9 @@
     </scenes>
     <resources>
         <image name="cardio" width="612" height="408"/>
-        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="fuerza" width="675" height="450"/>
-        <image name="house" catalog="system" width="128" height="104"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="logo_deportesGuerra" width="1024" height="1024"/>
         <image name="olympico" width="626" height="416"/>
-        <image name="person" catalog="system" width="128" height="121"/>
         <image name="powerlifting" width="612" height="408"/>
         <image name="saltospliometricos" width="850" height="565"/>
         <image name="strongman" width="675" height="450"/>

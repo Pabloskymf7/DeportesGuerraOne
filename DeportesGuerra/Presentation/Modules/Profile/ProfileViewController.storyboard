@@ -3,16 +3,15 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ProfileViewController" storyboardIdentifier="ProfileViewController" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="DeportesGuerra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,21 +31,6 @@
                                     <constraint firstAttribute="trailing" secondItem="eFU-Mu-BX5" secondAttribute="trailing" id="iMZ-lG-R5C"/>
                                 </constraints>
                             </view>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEl-e2-mq6">
-                                <rect key="frame" x="0.0" y="736" width="393" height="49"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="NMq-Ti-PHC"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Menu" image="house" catalog="system" id="tjZ-G7-sn6">
-                                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="medium" renderingMode="template" variableValue="0.40000000000000008"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Compra" image="cart" catalog="system" id="kfx-bI-Xef"/>
-                                    <tabBarItem title="Perfil" image="person" catalog="system" id="lJK-Ox-lkM"/>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-w6-i4q">
                                 <rect key="frame" x="0.0" y="408.33333333333326" width="393" height="307.66666666666674"/>
                                 <subviews>
@@ -204,13 +188,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0cs-vG-ZMQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="3Vv-bx-AHI"/>
-                            <constraint firstItem="vEl-e2-mq6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EHl-cz-qNS"/>
                             <constraint firstAttribute="trailing" secondItem="JRh-w6-i4q" secondAttribute="trailing" id="FRa-XL-9Dc"/>
-                            <constraint firstItem="vEl-e2-mq6" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="1" id="FiO-HJ-Jd3"/>
                             <constraint firstItem="JRh-w6-i4q" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="NVP-t6-iYp"/>
-                            <constraint firstItem="vEl-e2-mq6" firstAttribute="top" secondItem="JRh-w6-i4q" secondAttribute="bottom" constant="20" id="RpG-Ce-kVJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JRh-w6-i4q" secondAttribute="bottom" constant="68" id="PuX-dC-vKV"/>
                             <constraint firstItem="JRh-w6-i4q" firstAttribute="top" secondItem="0cs-vG-ZMQ" secondAttribute="bottom" constant="30" id="YFw-Fj-hBm"/>
-                            <constraint firstItem="vEl-e2-mq6" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="p54-K7-1Mb"/>
                             <constraint firstItem="0cs-vG-ZMQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="pIk-qj-7gs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0cs-vG-ZMQ" secondAttribute="trailing" constant="10" id="rY5-Ad-N0q"/>
                         </constraints>
@@ -222,10 +203,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="house" catalog="system" width="128" height="104"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
