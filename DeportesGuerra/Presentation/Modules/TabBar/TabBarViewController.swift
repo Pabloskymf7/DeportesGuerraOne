@@ -20,11 +20,9 @@ class TabBarViewController: UITabBarController {
 
     func configureTabBarView() {
         let menuViewController = MenuBuilder().build()
-        let menuNavigationController = UINavigationController(rootViewController: menuViewController)
         let profileViewController = ProfileBuilder().build()
-        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
 
-        let viewControllersList = [menuNavigationController, profileNavigationController] 
+        let viewControllersList = [menuViewController, profileViewController] 
         self.setViewControllers(viewControllersList, animated: true)
 
         guard let items = self.tabBar.items else {return}
