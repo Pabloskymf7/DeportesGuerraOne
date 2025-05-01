@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,28 +17,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowscene = (scene as? UIWindowScene) else { return }
-        let viewController = TabBarViewController().build()
-        let window = UIWindow(windowScene: windowscene)
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        self.window = window
-        
-        let userRequest = RegisterUserRequest(
-            username: "PabloDeveloper",
-            email: "pabloredes2fpbi@gmail.com",
-            password: "password123"
-        )
-        
-        AuthService.shared.registrerUser(with: userRequest) { wasRegistered, error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            print("wasRegistered", wasRegistered)
-        }
+        self.setupWindow(with: scene)
+//        
+//        let userRequest = RegisterUserRequest(
+//            username: "PabloDeveloper",
+//            email: "pabloredes2fpbi@gmail.com",
+//            password: "password123"
+//        )
+//        
+//        AuthService.shared.registrerUser(with: userRequest) { wasRegistered, error in
+//            if let error = error {
+//                print(error.localizedDescription)
+//                return
+//            }
+//            
+//            print("wasRegistered", wasRegistered)
+//        }
 //        Task{
 //            do{
 //                let data = SportDataSource()
@@ -47,6 +42,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                
 //            }
 //        }
+    }
+    
+    private func setupWindow(with scene: UIScene) {
+        guard let windowscene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowscene)
+        self.window?.makeKeyAndVisible()
+        self.window = window
+    }
+    
+    public func checkAuthentication() {
+        if Auth.auth().currentUser == nil {
+            let viewController = LoginBuilder().build()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window?.rootViewController = navigationController
+        } else {
+            let viewController = TabBarViewController().build()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window?.rootViewController = navigationController
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
