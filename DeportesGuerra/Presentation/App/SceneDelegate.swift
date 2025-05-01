@@ -23,6 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
+        
+        let userRequest = RegisterUserRequest(
+            username: "PabloDeveloper",
+            email: "pabloredes2fpbi@gmail.com",
+            password: "password123"
+        )
+        
+        AuthService.shared.registrerUser(with: userRequest) { wasRegistered, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            print("wasRegistered", wasRegistered)
+        }
 //        Task{
 //            do{
 //                let data = SportDataSource()
