@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol LoginViewModelProtocol {
+    func goToHomeScreen()
+}
+
+protocol LoginRouterProtocol {
+    func goToHomeScreen()
+}

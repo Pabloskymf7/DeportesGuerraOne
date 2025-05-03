@@ -183,14 +183,26 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDX-DW-IRS">
+                                <rect key="frame" x="159" y="739" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didSignOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hg5-eL-A1g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0cs-vG-ZMQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="3Vv-bx-AHI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HDX-DW-IRS" secondAttribute="trailing" constant="159" id="5qT-go-wDS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HDX-DW-IRS" secondAttribute="bottom" constant="10" id="8zF-wA-2pE"/>
                             <constraint firstAttribute="trailing" secondItem="JRh-w6-i4q" secondAttribute="trailing" id="FRa-XL-9Dc"/>
+                            <constraint firstItem="HDX-DW-IRS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="159" id="Mb9-z4-uDt"/>
                             <constraint firstItem="JRh-w6-i4q" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="NVP-t6-iYp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JRh-w6-i4q" secondAttribute="bottom" constant="68" id="PuX-dC-vKV"/>
+                            <constraint firstItem="HDX-DW-IRS" firstAttribute="top" secondItem="JRh-w6-i4q" secondAttribute="bottom" constant="23" id="VRP-Zr-hmw"/>
                             <constraint firstItem="JRh-w6-i4q" firstAttribute="top" secondItem="0cs-vG-ZMQ" secondAttribute="bottom" constant="30" id="YFw-Fj-hBm"/>
                             <constraint firstItem="0cs-vG-ZMQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="pIk-qj-7gs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0cs-vG-ZMQ" secondAttribute="trailing" constant="10" id="rY5-Ad-N0q"/>

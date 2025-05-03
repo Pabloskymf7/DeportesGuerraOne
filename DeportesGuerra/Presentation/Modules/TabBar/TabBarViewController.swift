@@ -14,8 +14,8 @@ class TabBarViewController: UITabBarController {
         configureTabBarView()
     }
 
-    func build() -> TabBarViewController {
-        self
+    static func build() -> TabBarViewController {
+        return TabBarViewController()
     }
 
     func configureTabBarView() {
