@@ -24,7 +24,10 @@ class TabBarViewController: UITabBarController {
 
         let viewControllersList = [menuViewController, profileViewController] 
         self.setViewControllers(viewControllersList, animated: true)
-
+        
+        let topBorder = UIView(frame: CGRect(x: 0, y: 0, width: tabBar.frame.width, height: 1))
+        topBorder.backgroundColor = UIColor.lightGray
+        tabBar.addSubview(topBorder)
         guard let items = self.tabBar.items else {return}
         items[0].title = "Menu"
         items[0].image = UIImage(systemName: "house")

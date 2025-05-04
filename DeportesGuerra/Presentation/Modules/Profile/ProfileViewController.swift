@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     // MARK: - IBOutlet
+    @IBOutlet weak var profileImageUIImage: UIImageView!
     @IBOutlet weak var usernameTextLabel: UILabel!
     @IBOutlet weak var emailTextLabel: UILabel!
     @IBOutlet weak var heigthTextLabel: UILabel!
@@ -49,6 +50,7 @@ class ProfileViewController: UIViewController {
                 return
             }
             
+            self.profileImageUIImage.image = UIImage(named: "PabloFoto")
             self.usernameTextLabel.text = data["username"] as? String ?? "Desconocido"
             self.emailTextLabel.text = data["email"] as? String ?? "Sin correo"
             self.heigthTextLabel.text = data["heigth"] as? String ?? "Desconocido" 
