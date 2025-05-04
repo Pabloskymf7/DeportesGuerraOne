@@ -9,4 +9,7 @@ import Foundation
 
 enum LoginError: Error {
     case Error
+    case InvalidEmail
+    case InvalidPassword
+    case InvalidSignIn
 }

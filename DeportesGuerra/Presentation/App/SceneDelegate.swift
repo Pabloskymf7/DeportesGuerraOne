@@ -19,11 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         self.setupWindow(with: scene)
         self.checkAuthentication()
-//        
+        
 //        let userRequest = RegisterUserRequest(
-//            username: "PabloDeveloper",
-//            email: "pabloredes2fpbi@gmail.com",
-//            password: "password123"
+//            username: "PabloM",
+//            email: "miguelferrerpablo@gmail.com",
+//            password: "Pablo$1"
 //        )
 //        
 //        AuthService.shared.registrerUser(with: userRequest) { wasRegistered, error in
