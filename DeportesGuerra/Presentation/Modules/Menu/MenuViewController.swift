@@ -55,5 +55,4 @@ class MenuViewController: UIViewController {
     @IBAction func goToPowerliftingExercises(_ sender: Any) {
         viewModel.goToPowerliftingScreen()
     }
-    
 }
