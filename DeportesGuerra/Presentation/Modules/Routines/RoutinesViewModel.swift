@@ -8,6 +8,7 @@
 import UIKit
 
 class RoutinesViewModel: RoutinesViewModelProtocol {
+    //MARK: - Properties
     var router: RoutinesRouterProtocol
     var exercise = [Exercise]()
     var endpoint: String
@@ -20,6 +21,7 @@ class RoutinesViewModel: RoutinesViewModelProtocol {
         self.sportUseCase = sportUseCase
     }
     
+    //MARK: - Functions
     func viewDidLoad() {
         getAllExercises(with: endpoint)
     }
@@ -33,5 +35,9 @@ class RoutinesViewModel: RoutinesViewModelProtocol {
                 print("Error \(error)")
             }
         }
+    }
+    
+    func goToDetailsRoutine(with index: Int) {
+        router.goToDetailsRoutine(with: exercise[index])
     }
 }

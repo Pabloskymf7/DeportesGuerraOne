@@ -12,8 +12,9 @@ protocol RoutinesViewModelProtocol {
     var endpoint: String { get }
     var dataLoaded: (() -> Void)? { get set }
     func viewDidLoad()
+    func goToDetailsRoutine(with index: Int)
 }
 
 protocol RoutinesRouterProtocol {
-    
+    func goToDetailsRoutine(with exercise: Exercise)
 }
