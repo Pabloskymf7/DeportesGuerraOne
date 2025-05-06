@@ -34,7 +34,7 @@ class DetailsRoutineViewController: UIViewController {
     
     //MARK: - Functions
     func configureScreen() {
-        exerciseNameLabel.text = viewModel.exercise.name
+        exerciseNameLabel.text = viewModel.exercise.name 
         exerciseTypeLabel.text = viewModel.exercise.type
         muscleLabel.text = viewModel.exercise.muscle
         equipmentLabel.text = viewModel.exercise.equipment
