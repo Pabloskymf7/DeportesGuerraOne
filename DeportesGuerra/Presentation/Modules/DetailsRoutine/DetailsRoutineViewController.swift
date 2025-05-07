@@ -13,7 +13,6 @@ class DetailsRoutineViewController: UIViewController {
     @IBOutlet weak var exerciseTypeLabel: UILabel!
     @IBOutlet weak var muscleLabel: UILabel!
     @IBOutlet weak var equipmentLabel: UILabel!
-    @IBOutlet weak var isRequiredEquipmentLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
     
@@ -34,15 +33,17 @@ class DetailsRoutineViewController: UIViewController {
     
     //MARK: - Functions
     func configureScreen() {
-        exerciseNameLabel.text = viewModel.exercise.name 
-        exerciseTypeLabel.text = viewModel.exercise.type
-        muscleLabel.text = viewModel.exercise.muscle
-        equipmentLabel.text = viewModel.exercise.equipment
-        difficultyLabel.text = viewModel.exercise.difficulty
+        exerciseNameLabel.text = viewModel.exercise.name.capitalized 
+        exerciseTypeLabel.text = viewModel.exercise.type.capitalized
+        muscleLabel.text = viewModel.exercise.muscle.capitalized
+        equipmentLabel.text = viewModel.exercise.equipment.capitalized
+        difficultyLabel.text = viewModel.exercise.difficulty.capitalized
         instructionsLabel.text = viewModel.exercise.instructions
+        
+        setupUI()
     }
     
     func setupUI() {
-        exerciseNameLabel.font = UIFont(name: "SourceSans3-Bold", size: 24)
+        exerciseNameLabel.font = UIFont(name: "SourceSans3-Bold", size: 34)
     }
 }
