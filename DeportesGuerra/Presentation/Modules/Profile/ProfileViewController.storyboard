@@ -217,6 +217,7 @@
                         <outlet property="emailTextLabel" destination="V7b-Eu-pkN" id="moA-W1-1cb"/>
                         <outlet property="heigthTextLabel" destination="w9M-84-ImW" id="vH3-if-j0g"/>
                         <outlet property="phoneNumberTextLabel" destination="2qR-KS-Wr8" id="TgK-H7-uGS"/>
+                        <outlet property="profileImageUIImage" destination="eFU-Mu-BX5" id="ebZ-QS-jMZ"/>
                         <outlet property="usernameTextLabel" destination="0jG-ny-mGt" id="e0r-PH-2He"/>
                         <outlet property="weightTextLabel" destination="tMD-LY-sui" id="gKi-RR-tL3"/>
                     </connections>

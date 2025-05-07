@@ -50,6 +50,10 @@ extension RoutinesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.goToDetailsRoutine(with: indexPath.row)
+    }
 
     func configureTable() {
         let nib = UINib(nibName: "RoutinesTableViewCell", bundle: nil)
