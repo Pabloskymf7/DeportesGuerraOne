@@ -18,6 +18,9 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saltospliometricos" translatesAutoresizingMaskIntoConstraints="NO" id="dPL-iR-N2m">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="260"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="260" id="06e-Av-haA"/>
+                        </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_deportesGuerra2" translatesAutoresizingMaskIntoConstraints="NO" id="DEO-sk-d51">
                         <rect key="frame" x="16" y="41" width="24" height="24"/>
@@ -26,8 +29,8 @@
                             <constraint firstAttribute="height" constant="24" id="lzM-PN-FnX"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="765-zu-md0">
-                        <rect key="frame" x="36" y="146" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="765-zu-md0">
+                        <rect key="frame" x="36" y="146" width="41.333333333333343" height="20.333333333333343"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -45,6 +48,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="homeImage" destination="dPL-iR-N2m" id="ehp-RL-6Bm"/>
+                <outlet property="homeLabel" destination="765-zu-md0" id="qF9-v1-IVx"/>
+                <outlet property="logoImage" destination="DEO-sk-d51" id="iP1-9P-PB9"/>
+            </connections>
             <point key="canvasLocation" x="140.45801526717557" y="76.056338028169023"/>
         </tableViewCell>
     </objects>

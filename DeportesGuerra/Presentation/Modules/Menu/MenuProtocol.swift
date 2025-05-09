@@ -19,3 +19,7 @@ protocol MenuViewModelProtocol {
     func goToStrengthScreen()
     func goToStrongmanScreen()
 }
+
+protocol HomeDelegateProtocol {
+    func goToDetailsScreen(with endpoint: String)
+}

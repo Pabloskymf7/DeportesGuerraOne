@@ -8,16 +8,23 @@
 import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    //MARK: - IBOutlet
+    @IBOutlet weak var homeImage: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var homeLabel: UILabel!
     
+    //MARK: - Functions
+    func configureCell() {
+        setupUI()
+    }
+
+    func setupUI() {
+        homeLabel.text = """
+            Comienza a
+            planificar tu
+            próxima aventura
+            """
+        homeImage.contentMode = .scaleAspectFill
+        self.selectionStyle = .none
+    }
 }
