@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class DetailsRoutineRouter: DetailsRoutineRouterProtocol {
+    var viewController: DetailsRoutineViewController
+    
+    init(viewController: DetailsRoutineViewController) {
+        self.viewController = viewController
+    }
+}
+
