@@ -21,12 +21,15 @@ class BodyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureCollectionView()
+        setupFonts()
     }
     
     //MARK: - Functions
+    func setupFonts() {
+        titleLabel.font = UIFont(name: "SourceSans3-Bold", size: 20)
+        descriptionLabel.font = UIFont(name: "SourceSans3-Regular", size: 16)
+    }
     
-    
-    //MARK: - Private Functions
     func setupNoProfessional() {
         titleLabel.text = "Es hora de entrenar!"
         descriptionLabel.text = "Descubre la manera de entrenar de forma efectiva"
@@ -35,7 +38,7 @@ class BodyTableViewCell: UITableViewCell {
     }
     
     func setupProfessional() {
-        titleLabel.text = "Prepara tus entrenamientos de más alto nivel"
+        titleLabel.text = "Prepara entrenamientos al más alto nivel"
         descriptionLabel.text = "¿Preparado para llevar tu exigencia al máximo?"
         isProfessional = true
         collectionView.reloadData()
@@ -76,9 +79,40 @@ extension BodyTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        self.delegate?.goToDetailsScreen(with: ExercisesEndpoints.RawValue)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? SportCollectionViewCell
+            cell?.animateSelection()
+        
+        var endpoint: String?
+        
+        if isProfessional {
+            switch indexPath.row {
+            case 0:
+                endpoint = ExercisesEndpoints.olympic.rawValue
+            case 1:
+                endpoint = ExercisesEndpoints.powerlifting.rawValue
+            case 2:
+                endpoint = ExercisesEndpoints.strongman.rawValue
+            default:
+                break
+            }
+        } else {
+            switch indexPath.row {
+            case 0:
+                endpoint = ExercisesEndpoints.cardio.rawValue
+            case 1:
+                endpoint = ExercisesEndpoints.strength.rawValue
+            case 2:
+                endpoint = ExercisesEndpoints.plyometrics.rawValue
+            default:
+                break
+            }
+        }
+        
+        if let endpoint = endpoint {
+            delegate?.goToDetailsScreen(with: endpoint)
+        }
+    }
     
     func configureCollectionView() {
         let nib = UINib(nibName: "SportCollectionViewCell", bundle: nil)

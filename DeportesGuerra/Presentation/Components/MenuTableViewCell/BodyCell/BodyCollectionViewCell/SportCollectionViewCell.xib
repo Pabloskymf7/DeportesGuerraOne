@@ -27,20 +27,20 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ig-Tx-4MU">
-                                <rect key="frame" x="0.0" y="100" width="192" height="6"/>
+                                <rect key="frame" x="0.0" y="100" width="192" height="8"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="6" id="I6O-y6-jm9"/>
+                                    <constraint firstAttribute="height" constant="8" id="I6O-y6-jm9"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-j0-nfa">
-                                <rect key="frame" x="0.0" y="106" width="192" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="108" width="192" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNa-57-32E">
-                                <rect key="frame" x="0.0" y="126.33333333333333" width="192" height="5.6666666666666714"/>
+                                <rect key="frame" x="0.0" y="128.33333333333334" width="192" height="3.6666666666666572"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>

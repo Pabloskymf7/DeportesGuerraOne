@@ -10,13 +10,11 @@ import UIKit
 class HeaderTableViewCell: UITableViewCell {
     //MARK: - IBOutlet
     @IBOutlet weak var homeImage: UIImageView!
-    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var homeLabel: UILabel!
     
     //MARK: - Functions
     func configureCell() {
         setupUI()
-        homeImage.contentMode = .scaleAspectFill
     }
 
     func setupUI() {
@@ -26,5 +24,7 @@ class HeaderTableViewCell: UITableViewCell {
             próxima aventura
             """
         self.selectionStyle = .none
+        homeImage.contentMode = .scaleAspectFill
+        homeLabel.font = UIFont(name: "SourceSans3-Bold", size: 30)
     }
 }

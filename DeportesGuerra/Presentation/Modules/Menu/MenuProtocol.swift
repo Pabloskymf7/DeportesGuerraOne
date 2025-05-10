@@ -12,12 +12,7 @@ protocol MenuRouterProtocol {
 }
 
 protocol MenuViewModelProtocol {
-    func goToCardioScreen()
-    func goToOlympicScreen()
-    func goToPliometricsScreen()
-    func goToPowerliftingScreen()
-    func goToStrengthScreen()
-    func goToStrongmanScreen()
+    
 }
 
 protocol HomeDelegateProtocol {

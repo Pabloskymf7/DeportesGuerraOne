@@ -9,14 +9,6 @@ import UIKit
 
 class MenuViewController: UIViewController {
     // MARK: - IBOutlet
-//    @IBOutlet weak var titleTextLabel: UILabel!
-//    @IBOutlet weak var chooseExerciseTextLabel: UILabel!
-//    @IBOutlet weak var cardioTextLabel: UILabel!
-//    @IBOutlet weak var olympicTextLabel: UILabel!
-//    @IBOutlet weak var pliometricsTextLabel: UILabel!
-//    @IBOutlet weak var strengthTextLabel: UILabel!
-//    @IBOutlet weak var strongmanTextLabel: UILabel!
-//    @IBOutlet weak var powerliftingTextLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
@@ -33,31 +25,6 @@ class MenuViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-
-    // MARK: - IBAction
-//    @IBAction func goToCardioExercises(_ sender: Any) {
-//        viewModel.goToCardioScreen()
-//    }
-//
-//    @IBAction func goToOlympicExercises(_ sender: Any) {
-//        viewModel.goToOlympicScreen()
-//    }
-//
-//    @IBAction func goToPliometricsExercises(_ sender: Any) {
-//        viewModel.goToPliometricsScreen()
-//    }
-//
-//    @IBAction func goToStrengthExercises(_ sender: Any) {
-//        viewModel.goToStrengthScreen()
-//    }
-//
-//    @IBAction func goToStrongmanExercises(_ sender: Any) {
-//        viewModel.goToStrongmanScreen()
-//    }
-//
-//    @IBAction func goToPowerliftingExercises(_ sender: Any) {
-//        viewModel.goToPowerliftingScreen()
-//    }
 }
 
 extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
@@ -66,7 +33,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-            return 20  // Espacio entre las celdas
+            return 20
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
