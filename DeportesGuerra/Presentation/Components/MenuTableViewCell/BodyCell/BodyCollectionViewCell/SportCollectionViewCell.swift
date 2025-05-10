@@ -39,7 +39,7 @@ class SportCollectionViewCell: UICollectionViewCell {
     }
     
     func setupOlympic() {
-        imageView.image = UIImage(named: "cardio")
+        imageView.image = UIImage(named: "movOlimpicos")
         titleLabel.text = "Olympic"
     }
     

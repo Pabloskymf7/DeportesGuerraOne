@@ -65,6 +65,10 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         return 3
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+            return 20  // Espacio entre las celdas
+        }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
