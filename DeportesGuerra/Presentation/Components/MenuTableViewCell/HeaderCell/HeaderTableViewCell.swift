@@ -19,9 +19,9 @@ class HeaderTableViewCell: UITableViewCell {
 
     func setupUI() {
         homeLabel.text = """
-            Comienza a
-            planificar tu
-            próxima aventura
+            Start planning
+            your
+            next adventure
             """
         self.selectionStyle = .none
         homeImage.contentMode = .scaleAspectFill

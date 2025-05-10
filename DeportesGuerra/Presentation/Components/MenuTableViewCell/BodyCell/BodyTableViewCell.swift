@@ -31,15 +31,15 @@ class BodyTableViewCell: UITableViewCell {
     }
     
     func setupNoProfessional() {
-        titleLabel.text = "Es hora de entrenar!"
-        descriptionLabel.text = "Descubre la manera de entrenar de forma efectiva"
+        titleLabel.text = "It's time to train!"
+        descriptionLabel.text = "Discover how to train effectively"
         isProfessional = false
         collectionView.reloadData()
     }
     
     func setupProfessional() {
-        titleLabel.text = "Prepara entrenamientos al más alto nivel"
-        descriptionLabel.text = "¿Preparado para llevar tu exigencia al máximo?"
+        titleLabel.text = "Prepare training at the highest level"
+        descriptionLabel.text = "Ready to take your training to the next level?"
         isProfessional = true
         collectionView.reloadData()
     }

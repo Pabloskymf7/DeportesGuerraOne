@@ -22,6 +22,11 @@ class SportRepository: SportRepositoryProtocol {
 
 fileprivate extension ExerciseDTO {
     func toDomain() -> Exercise {
-        Exercise(name: self.name, type: self.type, muscle: self.muscle, equipment: self.equipment, difficulty: self.difficulty, instructions: self.instructions.formatedByParenthesis())
+        Exercise(name: self.name,
+                 type: self.type,
+                 muscle: self.muscle,
+                 equipment: self.equipment,
+                 difficulty: self.difficulty.capitalized,
+                 instructions: self.instructions.formatedByParenthesis())
     }
 }
