@@ -21,22 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="192" height="121"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIE-fK-GcE">
-                                <rect key="frame" x="0.0" y="0.0" width="192" height="92.666666666666671"/>
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HMA-jD-hVv"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ig-Tx-4MU">
-                                <rect key="frame" x="0.0" y="92.666666666666671" width="192" height="8"/>
+                                <rect key="frame" x="0.0" y="100" width="192" height="8"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="I6O-y6-jm9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-j0-nfa">
-                                <rect key="frame" x="0.0" y="100.66666666666667" width="192" height="20.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-j0-nfa">
+                                <rect key="frame" x="0.0" y="108" width="192" height="13"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="uIE-fK-GcE" firstAttribute="leading" secondItem="bKv-7B-yOo" secondAttribute="leading" id="0lf-uP-Mbc"/>
+                            <constraint firstItem="dqL-j0-nfa" firstAttribute="leading" secondItem="bKv-7B-yOo" secondAttribute="leading" id="AsJ-Nq-TBy"/>
+                            <constraint firstItem="6Ig-Tx-4MU" firstAttribute="top" secondItem="uIE-fK-GcE" secondAttribute="bottom" id="Ewy-m2-2VA"/>
+                            <constraint firstItem="dqL-j0-nfa" firstAttribute="top" secondItem="6Ig-Tx-4MU" secondAttribute="bottom" id="iaS-5h-PCH"/>
+                            <constraint firstAttribute="bottom" secondItem="dqL-j0-nfa" secondAttribute="bottom" id="lEU-xm-n99"/>
+                            <constraint firstItem="uIE-fK-GcE" firstAttribute="top" secondItem="bKv-7B-yOo" secondAttribute="top" id="ltQ-Bw-I8i"/>
+                            <constraint firstAttribute="trailing" secondItem="uIE-fK-GcE" secondAttribute="trailing" id="ruD-lT-pd4"/>
+                            <constraint firstAttribute="trailing" secondItem="dqL-j0-nfa" secondAttribute="trailing" id="tq6-DO-QUT"/>
+                        </constraints>
                     </stackView>
                 </subviews>
             </view>
@@ -48,6 +61,10 @@
                 <constraint firstAttribute="trailing" secondItem="bKv-7B-yOo" secondAttribute="trailing" id="nMF-sL-qxg"/>
             </constraints>
             <size key="customSize" width="260" height="239"/>
+            <connections>
+                <outlet property="imageView" destination="uIE-fK-GcE" id="d5i-1J-G21"/>
+                <outlet property="titleLabel" destination="dqL-j0-nfa" id="Ld0-on-rAL"/>
+            </connections>
             <point key="canvasLocation" x="290.07633587786256" y="55.281690140845072"/>
         </collectionViewCell>
     </objects>

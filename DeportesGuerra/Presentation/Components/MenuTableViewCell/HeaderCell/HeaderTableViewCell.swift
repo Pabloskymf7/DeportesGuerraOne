@@ -16,6 +16,7 @@ class HeaderTableViewCell: UITableViewCell {
     //MARK: - Functions
     func configureCell() {
         setupUI()
+        homeImage.contentMode = .scaleAspectFill
     }
 
     func setupUI() {
@@ -24,7 +25,6 @@ class HeaderTableViewCell: UITableViewCell {
             planificar tu
             próxima aventura
             """
-        homeImage.contentMode = .scaleAspectFill
         self.selectionStyle = .none
     }
 }

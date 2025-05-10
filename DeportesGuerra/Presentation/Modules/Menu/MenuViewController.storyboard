@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-lr-wWb">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-lr-wWb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="784"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kF3-lr-wWb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2Kl-EN-DC3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kF3-lr-wWb" secondAttribute="trailing" id="D3A-8q-Vfj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kF3-lr-wWb" secondAttribute="bottom" id="Gow-zn-LrU"/>
+                            <constraint firstItem="kF3-lr-wWb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="VHr-qj-ieb"/>
                             <constraint firstItem="kF3-lr-wWb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YXV-4e-ueR"/>
                         </constraints>
                     </view>

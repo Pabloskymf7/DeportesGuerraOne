@@ -21,6 +21,7 @@ class MenuViewController: UIViewController {
     
     // MARK: - Properties
     var viewModel: MenuViewModelProtocol!
+    var delegate: HomeDelegateProtocol!
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -71,12 +72,15 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             headerCell.configureCell()
             return headerCell
         case 1:
-            let eventsCell = tableView.dequeueReusableCell(withIdentifier: "BodyTableViewCell", for: indexPath) as! BodyTableViewCell
-            
-            return eventsCell
+            let firstBody = tableView.dequeueReusableCell(withIdentifier: "BodyTableViewCell", for: indexPath) as! BodyTableViewCell
+            firstBody.delegate = viewModel as? HomeDelegateProtocol
+            firstBody.setupNoProfessional()
+            return firstBody
         case 2:
-            let sitesToDiscoverCell = tableView.dequeueReusableCell(withIdentifier: "BodyTableViewCell", for: indexPath) as! BodyTableViewCell
-            return sitesToDiscoverCell
+            let secondBody = tableView.dequeueReusableCell(withIdentifier: "BodyTableViewCell", for: indexPath) as! BodyTableViewCell
+            secondBody.delegate = viewModel as? HomeDelegateProtocol
+            secondBody.setupProfessional()
+            return secondBody
         default:
             return UITableViewCell()
         }
