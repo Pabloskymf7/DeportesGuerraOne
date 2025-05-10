@@ -18,6 +18,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var weightTextLabel: UILabel!
     @IBOutlet weak var phoneNumberTextLabel: UILabel!
     
+    @IBOutlet weak var defaultUsernameLabel: UILabel!
+    @IBOutlet weak var defaultEmailLabel: UILabel!
+    @IBOutlet weak var defaultHeightLabel: UILabel!
+    @IBOutlet weak var defaultWeigthLabel: UILabel!
+    @IBOutlet weak var defaultPhoneLabel: UILabel!
+    
     //MARK: - Properties
     var viewModel: ProfileViewModelProtocol!
     
@@ -30,7 +36,17 @@ class ProfileViewController: UIViewController {
     //MARK: - Functions
     func setupUI() {
         loadUserData()
+        setupFonts()
     }
+    
+    func setupFonts() {
+        defaultUsernameLabel.font = UIFont(name: "SourceSans3-Bold", size: 20)
+        defaultEmailLabel.font = UIFont(name: "SourceSans3-Bold", size: 20)
+        defaultHeightLabel.font = UIFont(name: "SourceSans3-Bold", size: 20)
+        defaultWeigthLabel.font = UIFont(name: "SourceSans3-Bold", size: 20)
+        defaultPhoneLabel.font = UIFont(name: "SourceSans3-Bold", size: 20)
+    }
+    //MARK: - Private Functions
     private func loadUserData() {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("Usuario no autenticado")
