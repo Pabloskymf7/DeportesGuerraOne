@@ -23,28 +23,10 @@ class MenuViewModel: MenuViewModelProtocol {
         self.router = router
         self.sportUseCase = sportUseCase
     }
+}
 
-    func goToCardioScreen() {
-        router.goToRoutinesScreen(with: ExercisesEndpoints.cardio.rawValue)
-    }
-    
-    func goToOlympicScreen() {
-        router.goToRoutinesScreen(with: ExercisesEndpoints.olympic.rawValue)
-    }
-    
-    func goToPliometricsScreen() {
-        router.goToRoutinesScreen(with: ExercisesEndpoints.plyometrics.rawValue)
-    }
-    
-    func goToPowerliftingScreen() {
-        router.goToRoutinesScreen(with: ExercisesEndpoints.powerlifting.rawValue)
-    }
-    
-    func goToStrengthScreen() {
-        router.goToRoutinesScreen(with: ExercisesEndpoints.strength.rawValue)
-    }
-    
-    func goToStrongmanScreen() {
-        router.goToRoutinesScreen(with: ExercisesEndpoints.strongman.rawValue)
+extension MenuViewModel : HomeDelegateProtocol {
+    func goToDetailsScreen(with endpoint: String) {
+        router.goToRoutinesScreen(with: endpoint)
     }
 }
