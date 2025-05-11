@@ -11,7 +11,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: - IBOutlet
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var eyeImage: UIImageView!
+
     //MARK: - Properties
     var viewModel: LoginViewModel!
     
@@ -68,5 +70,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 sceneDelegate.checkAuthentication()
             }
         }
+    }
+    
+    @IBAction func didCreateAccount(_ sender: Any) {
+    }
+    
+    @IBAction func didHidenEyeImage(_ sender: Any) {
+        passwordTextField.isSecureTextEntry.toggle()
+        eyeImage.image = UIImage(systemName: passwordTextField.isSecureTextEntry ? "eye.fill" : "eye.slash.fill")
     }
 }
