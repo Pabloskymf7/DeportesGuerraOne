@@ -45,5 +45,6 @@ class DetailsRoutineViewController: UIViewController {
     
     func setupUI() {
         exerciseNameLabel.font = UIFont(name: "SourceSans3-Bold", size: 34)
+        print(viewModel.exercise.instructions)
     }
 }
