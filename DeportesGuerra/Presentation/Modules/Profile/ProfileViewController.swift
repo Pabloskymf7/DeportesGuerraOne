@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController {
             self.profileImageUIImage.image = UIImage(named: "PabloFoto")
             self.usernameTextLabel.text = data["username"] as? String ?? "Desconocido"
             self.emailTextLabel.text = data["email"] as? String ?? "Sin correo"
-            self.heigthTextLabel.text = data["heigth"] as? String ?? "Desconocido" 
+            self.heigthTextLabel.text = data["height"] as? String ?? "Desconocido" 
             self.weightTextLabel.text = data["weight"] as? String ?? "Desconocido"
             self.phoneNumberTextLabel.text = data["phoneNumber"] as? String ?? "Desconocido"
         }

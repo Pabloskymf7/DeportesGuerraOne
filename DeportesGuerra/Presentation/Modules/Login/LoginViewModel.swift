@@ -15,6 +15,9 @@ class LoginViewModel: LoginViewModelProtocol {
     }
     
     func goToHomeScreen() {
-        
+    }
+    
+    func goToCreateAccount() {
+        router.goToCreateAccount()
     }
 }
