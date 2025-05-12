@@ -7,9 +7,11 @@
 
 import UIKit
 
-func build() -> CreateAccountViewController {
-    let viewController = UIStoryboard(name: "CreateAccountViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateAccountViewController") as! CreateAccountViewController
-    let router = LoginRouter(viewController: viewController)
-    viewController.viewModel = LoginViewModel(router: router)
-    return viewController
+class CreateAccountBuilder {
+    func build() -> CreateAccountViewController {
+        let viewController = UIStoryboard(name: "CreateAccountViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateAccountViewController") as! CreateAccountViewController
+        let router = CreateAccountRouter(viewController: viewController)
+        viewController.viewModel = CreateAccountViewModel(router: router)
+        return viewController
+    }
 }

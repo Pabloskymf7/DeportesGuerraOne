@@ -65,6 +65,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fE-2x-DWE">
                                                         <rect key="frame" x="0.0" y="30.333333333333371" width="361" height="24"/>
+                                                        <color key="backgroundColor" systemColor="lightTextColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="qLq-JA-Msx"/>
                                                         </constraints>
@@ -214,6 +215,9 @@
     <resources>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
         <image name="logo_deportesGuerra2" width="1024" height="1024"/>
+        <systemColor name="lightTextColor">
+            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

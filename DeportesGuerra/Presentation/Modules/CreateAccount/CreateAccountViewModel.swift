@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class CreateAccountViewModel {
+    private let router: CreateAccountRouterProtocol
+    
+    init(router: CreateAccountRouterProtocol) {
+        self.router = router
+    }
+}

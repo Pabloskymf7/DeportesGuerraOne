@@ -73,7 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func didCreateAccount(_ sender: Any) {
-        
+        viewModel.goToCreateAccount()
     }
     
     @IBAction func didHidenEyeImage(_ sender: Any) {

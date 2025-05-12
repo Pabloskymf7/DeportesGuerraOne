@@ -16,4 +16,9 @@ class LoginRouter: LoginRouterProtocol {
     
     func goToHomeScreen() {
     }
+    
+    func goToCreateAccount() {
+        let createAccountViewController = CreateAccountBuilder().build()
+        viewController.navigationController?.pushViewController(createAccountViewController, animated: true)
+    }
 }

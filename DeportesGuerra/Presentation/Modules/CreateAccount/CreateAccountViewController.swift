@@ -11,7 +11,7 @@ class CreateAccountViewController: UIViewController {
     //MARK: - IBOutlet
 
     //MARK: - Properties
-    var viewModel: LoginViewModel!
+    var viewModel: CreateAccountViewModel!
     
     //MARK: - LifeCycle 
     override func viewDidLoad() {

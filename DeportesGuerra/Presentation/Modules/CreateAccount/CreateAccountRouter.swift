@@ -8,9 +8,9 @@
 import Foundation
 
 class CreateAccountRouter: CreateAccountRouterProtocol {
-    let viewController: LoginViewController
+    let viewController: CreateAccountViewController
    
-    init(viewController: LoginViewController) {
+    init(viewController: CreateAccountViewController) {
         self.viewController = viewController
     }
     
