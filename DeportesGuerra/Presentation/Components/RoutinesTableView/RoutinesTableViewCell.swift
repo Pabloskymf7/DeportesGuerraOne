@@ -19,5 +19,11 @@ class RoutinesTableViewCell: UITableViewCell {
     func configureCell(with exercise: Exercise) {
         nameTextLabel.text = exercise.name
         difficultTextLabel.text = exercise.difficulty
+        setupUI()
+    }
+    
+    func setupUI() {
+        nameTextLabel.font = UIFont(name: "SourceSans3-Regular", size: 18)
+        difficultTextLabel.font = UIFont(name: "SourceSans3-Regular", size: 18)
     }
 }

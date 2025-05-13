@@ -28,7 +28,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5T-Fe-Wgf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5T-Fe-Wgf">
                                                 <rect key="frame" x="16" y="35" width="361" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -178,6 +178,7 @@
                         <outlet property="equipmentLabel" destination="VjJ-P2-4o3" id="JXi-bL-zC9"/>
                         <outlet property="exerciseNameLabel" destination="s5T-Fe-Wgf" id="e3Q-cI-Zsp"/>
                         <outlet property="exerciseTypeLabel" destination="ZHs-mk-bxy" id="dNA-Iy-5Yf"/>
+                        <outlet property="fixedInstructions" destination="DER-fs-f3M" id="wAr-Wg-ZLJ"/>
                         <outlet property="instructionsLabel" destination="4mU-in-pNv" id="NhW-1u-Obi"/>
                         <outlet property="muscleLabel" destination="eAn-a1-pu8" id="O6e-RD-5Fu"/>
                     </connections>

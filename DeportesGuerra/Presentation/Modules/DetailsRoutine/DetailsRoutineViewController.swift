@@ -15,6 +15,7 @@ class DetailsRoutineViewController: UIViewController {
     @IBOutlet weak var equipmentLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var fixedInstructions: UILabel!
     
     //MARK: - Properties
     var viewModel: DetailsRoutineViewModelProtocol! 
@@ -44,7 +45,13 @@ class DetailsRoutineViewController: UIViewController {
     }
     
     func setupUI() {
-        exerciseNameLabel.font = UIFont(name: "SourceSans3-Bold", size: 34)
+        exerciseNameLabel.font = UIFont(name: "SourceSans3-Bold", size: 34) 
+        exerciseTypeLabel.font = UIFont(name: "SourceSans3-Regular", size: 20)
+        muscleLabel.font = UIFont(name: "SourceSans3-Regular", size: 18)
+        equipmentLabel.font = UIFont(name: "SourceSans3-Regular", size: 18)
+        difficultyLabel.font = UIFont(name: "SourceSans3-Regular", size: 18)
+        instructionsLabel.font = UIFont(name: "SourceSans3-Regular", size: 18)
+        fixedInstructions.font = UIFont(name: "SourceSans3-Bold", size: 28)
         print(viewModel.exercise.instructions)
     }
 }
