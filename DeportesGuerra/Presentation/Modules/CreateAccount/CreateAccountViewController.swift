@@ -27,11 +27,21 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     //MARK: - LifeCycle 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tapGestures()
-        addDelegateToTextFields()
+        setupUI()
     }
     
     //MARK: - Functions
+    
+    func setupUI() {
+        tapGestures()
+        addDelegateToTextFields()
+        styleTextFields()
+        styleLogoImage()
+        
+        deportesGuerraLabel.font = UIFont(name: "SourceSans3-Bold", size: 30)
+        createYourAccountLabel.font = UIFont(name: "SourceSans3-Regular", size: 16)
+    }
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -90,7 +100,31 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    func styleTextFields() {
+        let textFields = [
+            emailLabel,
+            usernameLabel,
+            passwordLabel,
+            phoneNumberLabel,
+            weigthLabel,
+            heigthLabel
+        ]
+        
+        for textField in textFields {
+            textField?.layer.cornerRadius = 10
+            textField?.layer.borderWidth = 0.5
+            textField?.layer.borderColor = UIColor.lightGray.cgColor
+            textField?.layer.masksToBounds = true
+            textField?.setLeftPaddingPoints(8) // opcional: padding a la izquierda
+        }
+    }
 
+    func styleLogoImage() {
+        logoImage.layer.cornerRadius = logoImage.frame.height / 2
+        logoImage.layer.masksToBounds = true
+//        logoImage.layer.borderWidth = 0.5
+//        logoImage.layer.borderColor = UIColor.lightGray.cgColor
+    }
     
     //MARK: - IBAction
     @IBAction func createAccountButton(_ sender: Any) {
@@ -135,5 +169,12 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                 AlertManager.showRegistrationErrorAlert(on: self)
             }
         }
+    }
+}
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
     }
 }
