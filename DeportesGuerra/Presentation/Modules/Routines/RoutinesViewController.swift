@@ -10,7 +10,9 @@ import UIKit
 class RoutinesViewController: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var clickForInfo: UILabel!
     
+    //MARK: - Properties
     var viewModel: RoutinesViewModelProtocol!
     
     override func viewDidLoad() {
@@ -31,6 +33,7 @@ class RoutinesViewController: UIViewController {
     private func setupUI() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.title = "Deportes Guerra"
+        clickForInfo.font = UIFont(name: "SourceSans3-Regular", size: 18)
         configureTable()
     }
 }
