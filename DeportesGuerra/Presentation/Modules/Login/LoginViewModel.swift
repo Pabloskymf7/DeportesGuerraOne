@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+class LoginViewModel: LoginViewModelProtocol {
+    private let router: LoginRouterProtocol
+    
+    init(router: LoginRouterProtocol) {
+        self.router = router
+    }
+    
+    func goToHomeScreen() {
+    }
+    
+    func goToCreateAccount() {
+        router.goToCreateAccount()
+    }
+}

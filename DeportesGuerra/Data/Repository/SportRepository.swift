@@ -14,14 +14,19 @@ class SportRepository: SportRepositoryProtocol {
         self.sportDataSource = sportDataSource
     }
 
-    func getExercises() async throws -> [Exercise] {
-        let exercisesDTO = try await sportDataSource.getExercises()
+    func getExercises(with endpoint: String) async throws -> [Exercise] {
+        let exercisesDTO = try await sportDataSource.getExercises(with: endpoint)
         return exercisesDTO.map{ $0.toDomain() }
     }
 }
 
 fileprivate extension ExerciseDTO {
     func toDomain() -> Exercise {
-        Exercise(name: self.name, type: self.type, muscle: self.muscle, equipment: self.equipment, difficulty: self.difficulty, instructions: self.difficulty)
+        Exercise(name: self.name,
+                 type: self.type,
+                 muscle: self.muscle,
+                 equipment: self.equipment,
+                 difficulty: self.difficulty.capitalized,
+                 instructions: self.instructions.formatedByParenthesis())
     }
 }

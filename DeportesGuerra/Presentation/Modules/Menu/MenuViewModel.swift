@@ -6,35 +6,27 @@
 //
 
 import UIKit
+enum ExercisesEndpoints: String {
+    case cardio = "?type=cardio"
+    case olympic = "?type=olympic_weightlifting"
+    case plyometrics = "?type=plyometrics"
+    case powerlifting = "?type=powerlifting"
+    case strength = "?type=strength"
+    case strongman = "?type=strongman"
+}
 
 class MenuViewModel: MenuViewModelProtocol {
     var router: MenuRouterProtocol
     var sportUseCase: SportUseCaseProtocol
-    var dataLoaded: (() -> Void)?
-    var exercise = [Exercise]()
 
     init(router: MenuRouterProtocol, sportUseCase: SportUseCaseProtocol) {
         self.router = router
         self.sportUseCase = sportUseCase
     }
+}
 
-    func viewDidLoad() {
-        getAllExercises()
+extension MenuViewModel : HomeDelegateProtocol {
+    func goToDetailsScreen(with endpoint: String) {
+        router.goToRoutinesScreen(with: endpoint)
     }
-
-    private func getAllExercises() {
-//        Task {
-//            do {
-//                exercise = try await sportUseCase.getExercises()
-//                dataLoaded?()
-//            } catch {
-//                print("Error \(error)")
-//            }
-//        }
-    }
-
-    func goToProfile(with index: Int) {
-        router.goToProfile(with: exercise[index])
-    }
-
 }

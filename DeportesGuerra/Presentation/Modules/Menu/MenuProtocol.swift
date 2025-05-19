@@ -8,12 +8,13 @@
 import UIKit
 
 protocol MenuRouterProtocol {
-    func goToProfile(with exercise: Exercise)
+    func goToRoutinesScreen(with endpoint: String)
 }
 
 protocol MenuViewModelProtocol {
-    var exercise: [Exercise] { get }
-    var dataLoaded: (() -> Void)? { get set }
-    func viewDidLoad()
-    func goToProfile(with index: Int)
+    
+}
+
+protocol HomeDelegateProtocol {
+    func goToDetailsScreen(with endpoint: String)
 }
