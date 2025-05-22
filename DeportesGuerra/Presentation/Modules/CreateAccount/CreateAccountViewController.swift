@@ -20,6 +20,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneNumberLabel: UITextField!
     @IBOutlet weak var weigthLabel: UITextField!
     @IBOutlet weak var heigthLabel: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     //MARK: - Properties
     var viewModel: CreateAccountViewModel!
@@ -28,10 +29,14 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupKeyboardObservers()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: - Functions
-    
     func setupUI() {
         tapGestures()
         addDelegateToTextFields()
@@ -124,6 +129,36 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         logoImage.layer.masksToBounds = true
 //        logoImage.layer.borderWidth = 0.5
 //        logoImage.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+
+        let keyboardHeight = keyboardFrame.height
+        scrollView.contentInset.bottom = keyboardHeight
+        scrollView.verticalScrollIndicatorInsets.bottom = keyboardHeight
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        scrollView.contentInset = .zero
+        scrollView.verticalScrollIndicatorInsets = .zero
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let convertedFrame = textField.convert(textField.bounds, to: scrollView)
+        scrollView.scrollRectToVisible(convertedFrame, animated: true)
     }
     
     //MARK: - IBAction

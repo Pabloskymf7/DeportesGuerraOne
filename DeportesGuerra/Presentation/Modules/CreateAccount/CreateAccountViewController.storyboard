@@ -196,6 +196,7 @@
                         <outlet property="logoImage" destination="N9J-QD-MlT" id="zc2-qJ-gnp"/>
                         <outlet property="passwordLabel" destination="q9O-ZL-NYz" id="s8E-NK-p6r"/>
                         <outlet property="phoneNumberLabel" destination="h95-wn-P8f" id="68Y-KG-KPM"/>
+                        <outlet property="scrollView" destination="SDx-qc-RsG" id="ybq-O5-vMK"/>
                         <outlet property="usernameLabel" destination="x5E-27-EG1" id="BX7-I5-7Gi"/>
                         <outlet property="weigthLabel" destination="BNZ-3x-2nu" id="KiM-FA-AIe"/>
                     </connections>
